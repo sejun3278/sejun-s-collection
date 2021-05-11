@@ -1,0 +1,149 @@
+.custom_color_1 {
+  color: #00c7f5;
+}
+
+.gray {
+  color: #ababab;
+}
+
+@font-face {
+  font-family: "Recipekorea";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.recipe_korea {
+  font-family: Recipekorea;
+}
+
+body {
+  min-width: 320px;
+}
+
+.App {
+  max-width: 900px;
+  margin-left: 20%;
+  margin-right: 10%;
+  padding-top: 50px;
+}
+.App a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.App #home_div #header_div #header_title_div {
+  text-align: center;
+  padding: 0px;
+  height: 70px;
+  line-height: 45px;
+  border-bottom: solid 2px black;
+  font-family: Recipekorea;
+}
+.App #home_div #header_div #header_title_div h2 {
+  display: inline-block;
+  color: #00c7f5 !important;
+  margin: 0px 0px;
+}
+.App #home_div #header_div #category_div #category_list_div {
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+}
+.App #home_div #header_div #category_div #category_list_div div {
+  text-align: center;
+  cursor: pointer;
+  border: solid 1px #ababab;
+  height: 35px;
+  line-height: 35px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.App #home_div #header_div #category_div #category_list_div #select_cat {
+  color: white;
+  background-color: #a7bbc7;
+}
+.App #home_div #my_profile_div {
+  margin-top: 60px;
+}
+.App #home_div #my_profile_div #my_profile_info {
+  margin-top: -15px;
+  min-height: 200px;
+  border: solid 1px #ababab;
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+.App #home_div #my_profile_div #my_profile_info #profile_image_div {
+  width: 200px;
+  height: 200px;
+  background-image: url("https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/20210420_233452+(1).jpg");
+  background-size: 200px;
+  opacity: 0.9;
+  border-right: solid 3px #ababab;
+  background-repeat: no-repeat;
+}
+.App #home_div #my_profile_div #my_profile_info #developer_info_div {
+  height: 170px;
+  overflow: auto;
+  padding: 10px 15px;
+  font-size: 13px;
+  line-height: 30px;
+}
+.App #home_div #my_profile_div #my_profile_info #developer_info_div .info_grid_div {
+  display: grid;
+  grid-template-columns: 140px auto;
+}
+.App #home_div #home_idx_div #my_project_info {
+  margin-top: 80px;
+}
+
+.index_div {
+  margin: 40px 15px 0px 15px;
+}
+.index_div h4 {
+  height: 40px;
+  line-height: 40px;
+  font-family: Recipekorea;
+  color: #02475e;
+}
+
+@media (max-width: 1300px) {
+  .App {
+    margin-left: 15%;
+  }
+}
+@media (max-width: 1000px) {
+  .App {
+    margin-left: 12%;
+  }
+}
+@media (max-width: 750px) {
+  .info_grid_div {
+    grid-template-columns: 100px auto !important;
+  }
+}
+@media (max-width: 600px) {
+  .App {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media (max-width: 550px) {
+  #my_profile_info {
+    display: block !important;
+    background-color: black;
+  }
+  #my_profile_info #profile_image_div {
+    border-right: none !important;
+    opacity: 1 !important;
+    background-position-x: center;
+    width: initial !important;
+  }
+  #my_profile_info #developer_info_div {
+    background-color: white;
+    height: auto !important;
+  }
+  #my_profile_info #developer_info_div .info_grid_div {
+    border-bottom: dotted 1px #ababab;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
