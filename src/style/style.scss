@@ -1,5 +1,6 @@
 $custom_color_1 : #00c7f5; .custom_color_1 { color : $custom_color_1 }
 $gray : #ababab; .gray { color : $gray }
+
 @font-face {
     font-family: 'Recipekorea';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
@@ -7,7 +8,15 @@ $gray : #ababab; .gray { color : $gray }
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Wemakeprice-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $recipe_korea : Recipekorea; .recipe_korea { font-family: $recipe_korea; }
+$Wemakeprice_Bold : Wemakeprice-Bold; .Wemakeprice_Bold { font-family: $Wemakeprice_Bold; }
 
 
 body {
@@ -70,7 +79,7 @@ body {
         }
 
         #my_profile_div {
-            margin-top: 60px;
+            margin-top: 80px;
 
             #my_profile_info {
                 margin-top: -15px;
@@ -82,7 +91,7 @@ body {
                 #profile_image_div {
                     width: 200px;
                     height: 200px;
-                    background-image: url("https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/20210420_233452+(1).jpg");
+                    // background-image: url("https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/20210420_233452+(1).jpg");
                     background-size: 200px;
                     opacity: 0.9;
                     border-right: solid 3px #ababab;
@@ -104,12 +113,106 @@ body {
                 }
             }
         }
-        
-        #home_idx_div {
-            
 
+        #home_idx_div {
             #my_project_info {
-                margin-top: 80px;
+                margin-top: 140px;
+                padding-bottom: 40px;
+
+                #project_list_div {
+                    // width: 100%;
+                    border: solid 1px #ababab;
+                    padding: 5px;
+                    min-height: 200px;
+
+                    .project_info_div {
+                        height: 150px;
+                        border-bottom: dotted 1px #ababab;
+                        display: grid;
+                        grid-template-columns: 150px auto;
+
+                        .project_thumbnail_div {
+                            height: 150px;
+                            cursor: pointer;
+                            border-right: solid 1px #ababab;
+
+                            img {
+                                width: 147px;
+                                height: 150px;
+                            }
+                        }
+
+                        .project_detail_info_div {
+                            padding: 15px 10px;
+                            max-width: 99%;
+
+                            .project_title_grid_div {
+                                display: grid;
+                                grid-template-columns: 95% auto;
+
+                                .project_title_div {
+                                    font-family: $recipe_korea;
+                                }
+
+                                .project_move_icon_div {
+                                    img {
+                                        width: 25px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+
+                            .project_info_web_div {
+                                font-size: 14px;
+                                padding-left: 10px;
+
+                                .project_category_div, .project_skill_stack_div {
+                                    margin-top: 5px;
+                                    color: #ababab;
+                                    font-family: $Wemakeprice_Bold;
+                                }
+
+                                .project_comment_div {
+                                    height: 40px;
+                                    line-height: 40px;
+                                    width: 100%;
+                                    white-space: nowrap; 
+                                    overflow: hidden; 
+                                    text-overflow: ellipsis;
+                                }
+
+                                .project_skill_stack_div {
+                                    margin-top: 15px;
+
+                                    .project_skill_divs {
+                                        display: inline-block;
+                                        margin-right: 15px;
+                                    }
+                                }
+                            }
+
+                            .project_info_mobile_div {
+                                display: none;
+                                margin-top: 15px;
+
+                                .toggle_detail_info_button {
+                                    font-size: 13px;
+                                    color: #ababab;
+                                    width: 100%;
+                                    background-color: white;
+                                    height: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #scrolling_end {
+                text-align: center;
+                font-family: $recipe_korea;
+                color: #ababab;
+                height: 60px;
             }
         }
     }
@@ -151,7 +254,7 @@ body {
     }
 }
 
-@media (max-width : 550px) {
+@media (max-width : 750px) {
     #my_profile_info {
         display: block !important;
         background-color: black;
@@ -171,5 +274,32 @@ body {
                 border-bottom: dotted 1px #ababab;
             }
         }
+    }
+
+    .project_info_div {
+        display: block !important;
+        height: auto !important;
+
+        .project_thumbnail_div { 
+            background-color: black;
+            width: 100%;
+        }
+
+        .project_info_web_div {
+            display: none;
+        }
+
+        .project_info_mobile_div {
+            display: block !important;
+        }
+    }
+
+    #scrolling_end {
+        height: 50px;
+        line-height: 20px;
+        border: solid 2px black;
+        background-color: black;
+        color: white;
+        opacity: 0.75;
     }
 }

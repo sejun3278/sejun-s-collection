@@ -12,8 +12,18 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Wemakeprice-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .recipe_korea {
   font-family: Recipekorea;
+}
+
+.Wemakeprice_Bold {
+  font-family: Wemakeprice-Bold;
 }
 
 body {
@@ -62,7 +72,7 @@ body {
   background-color: #a7bbc7;
 }
 .App #home_div #my_profile_div {
-  margin-top: 60px;
+  margin-top: 80px;
 }
 .App #home_div #my_profile_div #my_profile_info {
   margin-top: -15px;
@@ -74,7 +84,6 @@ body {
 .App #home_div #my_profile_div #my_profile_info #profile_image_div {
   width: 200px;
   height: 200px;
-  background-image: url("https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/20210420_233452+(1).jpg");
   background-size: 200px;
   opacity: 0.9;
   border-right: solid 3px #ababab;
@@ -92,7 +101,84 @@ body {
   grid-template-columns: 140px auto;
 }
 .App #home_div #home_idx_div #my_project_info {
-  margin-top: 80px;
+  margin-top: 140px;
+  padding-bottom: 40px;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div {
+  border: solid 1px #ababab;
+  padding: 5px;
+  min-height: 200px;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div {
+  height: 150px;
+  border-bottom: dotted 1px #ababab;
+  display: grid;
+  grid-template-columns: 150px auto;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_thumbnail_div {
+  height: 150px;
+  cursor: pointer;
+  border-right: solid 1px #ababab;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_thumbnail_div img {
+  width: 147px;
+  height: 150px;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div {
+  padding: 15px 10px;
+  max-width: 99%;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_title_grid_div {
+  display: grid;
+  grid-template-columns: 95% auto;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_title_grid_div .project_title_div {
+  font-family: Recipekorea;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_title_grid_div .project_move_icon_div img {
+  width: 25px;
+  cursor: pointer;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_info_web_div {
+  font-size: 14px;
+  padding-left: 10px;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_info_web_div .project_category_div, .App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_info_web_div .project_skill_stack_div {
+  margin-top: 5px;
+  color: #ababab;
+  font-family: Wemakeprice-Bold;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_info_web_div .project_comment_div {
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_info_web_div .project_skill_stack_div {
+  margin-top: 15px;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_info_web_div .project_skill_stack_div .project_skill_divs {
+  display: inline-block;
+  margin-right: 15px;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_info_mobile_div {
+  display: none;
+  margin-top: 15px;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_info_mobile_div .toggle_detail_info_button {
+  font-size: 13px;
+  color: #ababab;
+  width: 100%;
+  background-color: white;
+  height: 40px;
+}
+.App #home_div #home_idx_div #scrolling_end {
+  text-align: center;
+  font-family: Recipekorea;
+  color: #ababab;
+  height: 60px;
 }
 
 .index_div {
@@ -126,7 +212,7 @@ body {
     margin-right: 0px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 750px) {
   #my_profile_info {
     display: block !important;
     background-color: black;
@@ -143,6 +229,30 @@ body {
   }
   #my_profile_info #developer_info_div .info_grid_div {
     border-bottom: dotted 1px #ababab;
+  }
+
+  .project_info_div {
+    display: block !important;
+    height: auto !important;
+  }
+  .project_info_div .project_thumbnail_div {
+    background-color: black;
+    width: 100%;
+  }
+  .project_info_div .project_info_web_div {
+    display: none;
+  }
+  .project_info_div .project_info_mobile_div {
+    display: block !important;
+  }
+
+  #scrolling_end {
+    height: 50px;
+    line-height: 20px;
+    border: solid 2px black;
+    background-color: black;
+    color: white;
+    opacity: 0.75;
   }
 }
 

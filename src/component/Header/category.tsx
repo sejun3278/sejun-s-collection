@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import catData from './cat_data.json';
 
 interface CategoryProps {
+    _clickCategory : Function,
+    _dataSearch : Function
 }
 
 interface CategoryState {
@@ -31,6 +33,7 @@ class Category extends React.Component<CategoryProps, CategoryState> {
                         return(
                             <Link to={el.url} key={key}>
                                 <div
+                                    onClick={() => props._clickCategory(el.url)}
                                     id={cat_name === el.url ? "select_cat" : undefined}
                                 >
                                     {el.name}

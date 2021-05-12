@@ -1,38 +1,59 @@
 import * as React from 'react';
 
 import Header from './Header/index';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import HomeIdx from './Home/index';
-import jQuery from './Home/jQuery';
-import _React from './Home/react';
+// import jQuery from './Home/jQuery';
+// import _React from './Home/react';
 
 interface HomeProps {
 }
 
 interface HomeState {
-
+    page : string,
+    data_search : boolean
 }
 
 class Home extends React.Component<HomeProps, HomeState> {
     public state = {
-
+        page : "",
+        data_search : false
     };
   
     constructor(props: HomeProps) {
       super(props);
     }
 
+    _changePage : Function = (page : string) => {
+        this.setState({
+            'page' : page
+        });
+    }
+
+    _dataSearch : Function = ( bool : boolean ) => {
+        this.setState({
+            'data_search' : bool
+        })
+    }
+
     public render() {
         return(
             <div id='home_div'>
-                <Header />
+                <Header 
+                    page={this.state.page}
+                    _changePage={this._changePage}
+                    _dataSearch={this._dataSearch}
+                />
 
                 <Switch>
-                    <Route path='/' component={HomeIdx} />
-                    {/* <Route path='/react' component={_React} />
-                    <Route path='/jQuery' component={jQuery} /> */}
-                    
+                    <Route path='/' render={(props) => <HomeIdx
+                           page={this.state.page} 
+                           data_search={this.state.data_search}
+                           _dataSearch={this._dataSearch}
+                        {...props}
+                        />}
+                    />
                 </Switch>
             </div>
         )

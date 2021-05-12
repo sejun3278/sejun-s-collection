@@ -1,0 +1,257 @@
+[
+    {
+        "title" : "클럽 온 (jQuery)",
+        "type" : "jQuery",
+        "date" : "2018-08-02",
+        "thumb" : "",
+        "images" : [
+
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["jQuery"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://clubon.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "코로나 시대에 집에서 클럽을 즐기자."
+    },
+
+    {
+        "title" : "가위바위보 (jQuery)",
+        "type" : "jQuery",
+        "date" : "2018-09-14",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/1.+origin-rps+(thumb).png",
+        "images" : [
+
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["jQuery"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://origin-rps.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "기본적인 가위바위보 게임"
+    },
+
+    {
+        "title" : "랜덤 가위바위보",
+        "type" : "jQuery",
+        "date" : "2018-09-17",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["jQuery"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://random-rps.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "선택한 카드들을 이용한 컴퓨터와의 가위바위보 게임"
+    },
+
+    {
+        "title" : "숫자 야구",
+        "type" : "jQuery",
+        "date" : "2018-09-23",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["jQuery"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://number-baseball.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "기본적인 숫자 야구 게임 (4 자리 버전)"
+    },
+
+    {
+        "title" : "카드 레이스 (냥이 VS 댕댕이)",
+        "type" : "jQuery",
+        "date" : "2018-09-27",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["jQuery"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://card-race.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "냥이와 댕댕이의 카드 레이스 배틀"
+    },
+
+    {
+        "title" : "카드 레이스 (짐승 친구들)",
+        "type" : "jQuery",
+        "date" : "2018-10-11",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game", "짐승 친구들", "짤툰" ],
+        "stack" : ["jQuery"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://card-race-animal-friends.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "짐승 친구들의 숫자 카드 레이스"
+    },
+
+    {
+        "title" : "인디언 섯다",
+        "type" : "jQuery",
+        "date" : "2018-10-30",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["jQuery"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://indian-sutda.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "인디언 포커와 섯다의 조합"
+    },
+
+    {
+        "title" : "땅따먹기 공방전",
+        "type" : "jQuery",
+        "date" : "2018-12-16",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["jQuery"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://ground-picking.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "컴퓨터와의 땅따먹기 공방전"
+    },
+
+    {
+        "title" : "댕댕이 다마고치",
+        "type" : "jQuery",
+        "date" : "2018-12-27",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["jQuery"],
+        "mobile" : false,
+        "complate" : 30,
+        "url" : "http://dengdeng-damagochi.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "댕댕이 키우기 (구현 중)"
+    },
+
+    {
+        "title" : "클럽 온 (React)",
+        "type" : "react",
+        "date" : "2020-05-12",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["React", "jQuery"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://reactclubon.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "React 로 리뉴얼한 클럽 온"
+    },
+
+    {
+        "title" : "가위바위보 (React)",
+        "type" : "react",
+        "date" : "2020-05-31",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["React", "jQuery"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://reactcardrps.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "React 로 재구성한 가위바위보 게임"
+    },
+
+    {
+        "title" : "카드 가위바위보",
+        "type" : "react",
+        "date" : "2020-06-17",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["Redux", "jQuery"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://reactcardrps.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "처음 선택한 가위바위보 카드로 상대방과 가위바위보 게임 진행"
+    },
+
+    {
+        "title" : "테트리스",
+        "type" : "react",
+        "date" : "2020-06-20",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["React"],
+        "mobile" : false,
+        "complate" : 70,
+        "url" : "http://reduxtetris.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "Redux 구성의 간단한 테트리스 게임 (구현 중)"
+    },
+
+    {
+        "title" : "Redux 쇼핑몰",
+        "type" : "react",
+        "date" : "2020-06-20",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "web" ],
+        "stack" : ["Redux", "Nodejs", "MySQL"],
+        "mobile" : true,
+        "complate" : 100,
+        "url" : "http://sejun-redux-mall.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "Nodejs 서버와 Redux 클라이언트로 구성된 쇼핑몰 사이트"
+    },
+
+    {
+        "title" : "Bingo !",
+        "type" : "react",
+        "date" : "2020-06-20",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["Redux", "TypeScript"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://typescript-bingo.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "TypeScript 와 Redux 를 이용한 간단한 빙고 게임"
+    },
+
+    {
+        "title" : "대한의 마블 (부루마블)",
+        "type" : "react",
+        "date" : "2020-06-20",
+        "thumb" : "",
+        "images" : [
+            
+        ],
+        "keyword" : [ "game" ],
+        "stack" : ["Redux", "TypeScript"],
+        "mobile" : false,
+        "complate" : 100,
+        "url" : "http://typescript-blue-marble.s3-website.ap-northeast-2.amazonaws.com/",
+        "comment" : "한국의 도시들을 이용한 한국형 부루마블 게임"
+    }
+]
