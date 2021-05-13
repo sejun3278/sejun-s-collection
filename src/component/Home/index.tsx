@@ -14,7 +14,8 @@ interface HomeIndexState {
     start_data : number,
     filter_data : string,
     loading : boolean,
-    able_scrolling : boolean
+    able_scrolling : boolean,
+    detail_info_number : number | null
 }
 
 class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
@@ -26,7 +27,8 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
         start_data : 0,
         filter_data : JSON.stringify([]),
         loading : false,
-        able_scrolling : true
+        able_scrolling : true,
+        detail_info_number : null
     };
   
     constructor(props: HomeIndexProps) {
@@ -67,7 +69,8 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
             'end_data' : this.state.data_limit,
             'filter_data' : JSON.stringify([]),
             'loading' : false,
-            'able_scrolling' : true
+            'able_scrolling' : true,
+            'detail_info_number' : null
         }
 
         if(page !== '/') {
@@ -157,6 +160,17 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
         }
     }
 
+    _clickDetailInfo = (num : number) => {
+        const { detail_info_number } = this.state;
+
+        if(detail_info_number !== num) {
+            this.setState({ 'detail_info_number' : num })
+
+        } else if(detail_info_number === num) {
+            this.setState({ 'detail_info_number' : null })
+        }
+    }
+
     public render() {
         const props : any = this.props;
         // const page = props.location.pathname;
@@ -178,7 +192,8 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
                     <h4> 개발자 소개 </h4>
 
                     <div id='my_profile_info'>
-                        <div id='profile_image_div'
+                        <img id='profile_image_div' alt=''
+                             src={this.state.profile}
                             // style={{ 'backgroundImage' : `url(${this.state.profile})` }}
                         />
                         <div id='developer_info_div'>
@@ -217,7 +232,6 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
                     
                     <div id='project_list_div'>
                         {filter_data.map( (el : any, key : number) => {
-                            console.log(el.thumb)
                             return(
                                 <div className='project_info_div' key={key}
                                      style={ (filter_data.length - 1) === key ? { 'borderBottom' : 'none' } : undefined }
@@ -226,19 +240,32 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
                                         <div className='project_thumbnail'>
                                             <img alt='' src={el.thumb} />
                                         </div>
+
+                                            {el.mobile === true
+                                                ?  
+                                                    <div className='project_option_div'>
+                                                        반응형
+                                                    </div>
+
+                                                : undefined
+                                            }
                                     </div>
 
                                     <div className='project_detail_info_div'>
                                         <div className='project_title_grid_div'>
+
                                             <div className='project_title_div'
                                                 style={el.complate !== 100 ? { 'color' : '#ababab' } : undefined}
                                             > 
-                                                {el.title} 
-                                                {el.complate !== 100
-                                                    ? ' ( 미완성 )'
+                                                <div className='project_keyword_div'>
+                                                    {el.keyword[0]}
+                                                </div>
+                                                    {el.title} 
+                                                    {el.complate !== 100
+                                                        ? ' ( 미완성 )'
 
-                                                    : undefined
-                                                }
+                                                        : undefined
+                                                    }
                                             </div>
 
                                             <div className='project_move_icon_div'>
@@ -249,8 +276,15 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
                                         </div>
 
                                         <div className='project_info_web_div'>
-                                            <div className='project_category_div'>
-                                                카테고리　|　{el.type === 'react' ? 'React' : 'jQuery'}
+                                            <div className='project_category_and_date_grid_div'>
+                                                <div className='project_category_div'>
+                                                    카테고리　|　{el.type === 'react' ? 'React' : 'jQuery'}
+                                                </div>
+
+                                                <div className='project_date_div'>
+                                                    {el.complate === 100 ? '개발 완료일' : '개발 시작일'}　|　
+                                                    {el.date}
+                                                </div>
                                             </div>
 
                                             <div className='project_comment_div' 
@@ -271,8 +305,54 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
 
                                         <div className='project_info_mobile_div'>
                                             <input className='toggle_detail_info_button' type='button' 
-                                                   value='▼ 상세 내용'
+                                                //    value='▼ 상세 내용' 
+                                                   value={this.state.detail_info_number === key ? '▲ 닫기' : '▼ 상세 내용'}
+                                                   onClick={() => this._clickDetailInfo(key)}
                                             />
+
+                                            {this.state.detail_info_number !== null
+                                                ? this.state.detail_info_number === key 
+                                                    ? <div id='project_mobile_detail_info_div'>
+                                                        <div className='detail_grid_div'>
+                                                            <div className='aRight'> 카테고리　|　</div>
+                                                            <div> {el.type} </div>
+                                                        </div>
+
+                                                        <div className='detail_grid_div'>
+                                                            <div className='aRight'>
+                                                                {el.complate === 100
+                                                                    ? '개발 완료일'
+
+                                                                    : '개발 시작일'
+                                                                }
+                                                                　|　
+                                                            </div>
+                                                            <div> {el.date} </div>
+                                                        </div>
+
+                                                        <div id='detail_comment_div' 
+                                                             dangerouslySetInnerHTML={{ __html : el.comment }}
+                                                        />
+
+                                                        <div className='detail_grid_div'>
+                                                            <div> 사용 스택 </div>
+                                                            <div> 　 </div>
+                                                        </div>
+
+                                                        <div id='detail_skill_divs'>
+                                                            {el.stack.map( (cu : any, key2 : number) => {
+                                                                return(
+                                                                    <div key={key2} className='detail_stack_divs'>
+                                                                        {cu}
+                                                                    </div>
+                                                                )
+                                                            })}
+                                                        </div>
+                                                      </div>
+
+                                                    : undefined
+                                                : undefined
+                                            }
                                         </div>
                                     </div>
                                 </div>
