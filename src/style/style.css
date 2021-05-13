@@ -265,6 +265,60 @@ body {
   color: #02475e;
 }
 
+#images_div #images_grid_div {
+  display: grid;
+  grid-template-columns: 90% auto;
+}
+#images_div #images_grid_div h3 {
+  font-family: Recipekorea;
+  padding-left: 15px;
+}
+#images_div #images_grid_div #image_close_icon_div {
+  line-height: 70px;
+  text-align: right;
+  padding-right: 15px;
+}
+#images_div #images_grid_div #image_close_icon_div #close_icon {
+  width: 25px;
+  cursor: pointer;
+}
+#images_div #now_image_div {
+  border: solid 1px #ababab;
+  min-height: 300px;
+}
+#images_div #now_image_div img {
+  object-fit: fill;
+  width: 650px;
+  height: 350px;
+}
+#images_div #image_list_div {
+  margin-top: 15px;
+  padding: 10px;
+  border: solid 1px #ababab;
+  height: 85px !important;
+  max-height: 85px !important;
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  min-width: 300px;
+}
+#images_div #image_list_div #select_image {
+  border: solid 3px #00c7f5;
+}
+#images_div #image_list_div .image_list_divs {
+  display: inline-block;
+  width: 100px;
+  height: 80px;
+  margin-right: 15px;
+  border: solid 1px #ababab;
+}
+#images_div #image_list_div .image_list_divs img {
+  object-fit: cover;
+  width: 100px;
+  height: 80px;
+  cursor: pointer;
+}
+
 @media (max-width: 1300px) {
   .App {
     margin-left: 15%;
@@ -290,6 +344,14 @@ body {
     min-width: 250px !important;
     max-width: 85% !important;
     width: 100% !important;
+  }
+
+  #images_div #now_image_div {
+    min-height: 250px !important;
+  }
+  #images_div #now_image_div img {
+    width: 100% !important;
+    height: 250px !important;
   }
 }
 @media (max-width: 750px) {
@@ -358,6 +420,14 @@ body {
     color: white;
     opacity: 0.75;
   }
+
+  #images_div #now_image_div {
+    min-height: 320px;
+  }
+  #images_div #now_image_div img {
+    width: 550px;
+    height: 320px;
+  }
 }
 @media (max-width: 385px) {
   .project_info_div .project_thumbnail_div {
@@ -370,6 +440,31 @@ body {
 
   .project_title_div {
     width: 90% !important;
+  }
+}
+@media (max-width: 370px) {
+  #images_div {
+    width: 90% !important;
+    margin-left: 5% !important;
+  }
+  #images_div #now_image_div {
+    min-height: 200px !important;
+  }
+  #images_div #now_image_div img {
+    width: 100% !important;
+    height: 200px !important;
+  }
+}
+@media (max-width: 345px) {
+  #images_div {
+    width: 80% !important;
+    margin-left: 10% !important;
+  }
+  #images_div #now_image_div img {
+    width: 100% !important;
+  }
+  #images_div #image_list_div {
+    min-width: 250px;
   }
 }
 

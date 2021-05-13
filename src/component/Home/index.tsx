@@ -1,4 +1,18 @@
 import * as React from 'react';
+import Modal from 'react-modal';
+
+import Images from './images';
+
+const customStyles = {
+    content : {
+      top                   : '50%',
+      left                  : '50%',
+      right                 : 'auto',
+      bottom                : 'auto',
+      marginRight           : '-50%',
+      transform             : 'translate(-50%, -50%)'
+    }
+};
 
 interface HomeIndexProps {
     page : string,
@@ -15,7 +29,9 @@ interface HomeIndexState {
     filter_data : string,
     loading : boolean,
     able_scrolling : boolean,
-    detail_info_number : number | null
+    detail_info_number : number | null,
+    image_modal : null | number,
+    image_list : string
 }
 
 class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
@@ -28,7 +44,9 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
         filter_data : JSON.stringify([]),
         loading : false,
         able_scrolling : true,
-        detail_info_number : null
+        detail_info_number : null,
+        image_modal : null,
+        image_list : JSON.stringify([])
     };
   
     constructor(props: HomeIndexProps) {
@@ -171,6 +189,24 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
         }
     }
 
+    // 모달창 열기
+    _toggleImageModal = (num : number, bool : boolean) => {
+        const data_list = JSON.parse(this.state.filter_data);
+
+        if(bool === true) {
+            this.setState({
+                "image_modal" : num,
+                "image_list" : JSON.stringify(data_list[num].images)
+            })
+
+        } else if(bool === false) {
+            this.setState({
+                "image_modal" : null,
+                "image_list" : JSON.stringify([])
+            })
+        }
+    }
+
     public render() {
         const props : any = this.props;
         // const page = props.location.pathname;
@@ -229,6 +265,19 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
 
                 <div id='my_project_info' className='index_div'>
                     <h4> 진행 프로젝트　{filter} </h4>
+
+                    <Modal
+                        isOpen={this.state.image_modal !== null}
+                        // onAfterOpen={afterOpenModal}
+                        onRequestClose={() => this._toggleImageModal(0, false)}
+                        style={customStyles}
+                        contentLabel="Example Modal"
+                    >
+                        <Images 
+                            _toggleImageModal={this._toggleImageModal}
+                            image_list={this.state.image_list}
+                        />
+                    </Modal>
                     
                     <div id='project_list_div'>
                         {filter_data.map( (el : any, key : number) => {
@@ -237,7 +286,9 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
                                      style={ (filter_data.length - 1) === key ? { 'borderBottom' : 'none' } : undefined }
                                 >   
                                     <div className='project_thumbnail_div'>
-                                        <div className='project_thumbnail'>
+                                        <div className='project_thumbnail'
+                                             onClick={() => this._toggleImageModal(key, true)}
+                                        >
                                             <img alt='' src={el.thumb} />
                                         </div>
 

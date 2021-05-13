@@ -5,7 +5,9 @@
         "date" : "2018-08-02",
         "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/0.+club+on+(thumb).png",
         "images" : [
-
+            "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/0.+play+1.png",
+            "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/0.+play+2.png",
+            "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/0.+play+3.png"
         ],
         "keyword" : [ "Game" ],
         "stack" : ["jQuery"],
@@ -92,7 +94,7 @@
         "mobile" : false,
         "complate" : 100,
         "url" : "http://card-race-animal-friends.s3-website.ap-northeast-2.amazonaws.com/",
-        "comment" : "짐승 친구들의 숫자 카드 레이스"
+        "comment" : "짐승 친구들의 숫자 카드 레이스 (출처 : 짤툰 - 짐승 친구들)"
     },
 
     {
