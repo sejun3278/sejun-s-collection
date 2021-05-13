@@ -3,7 +3,7 @@
         "title" : "클럽 온 (jQuery)",
         "type" : "jQuery",
         "date" : "2018-08-02",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/0.+club+on+(thumb).png",
         "images" : [
 
         ],
@@ -35,7 +35,7 @@
         "title" : "랜덤 가위바위보",
         "type" : "jQuery",
         "date" : "2018-09-17",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/2.+random+card+rps+(thumb).png",
         "images" : [
             
         ],
@@ -51,7 +51,7 @@
         "title" : "숫자 야구",
         "type" : "jQuery",
         "date" : "2018-09-23",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/3.+number+base+ball.png",
         "images" : [
             
         ],
@@ -67,7 +67,7 @@
         "title" : "카드 레이스 (냥이 VS 댕댕이)",
         "type" : "jQuery",
         "date" : "2018-09-27",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/4.+dog+and+cat+race+(thumb).png",
         "images" : [
             
         ],
@@ -83,7 +83,7 @@
         "title" : "카드 레이스 (짐승 친구들)",
         "type" : "jQuery",
         "date" : "2018-10-11",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/5.+animals+firends+(thumb).png",
         "images" : [
             
         ],
@@ -99,7 +99,7 @@
         "title" : "인디언 섯다",
         "type" : "jQuery",
         "date" : "2018-10-30",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/6.+indian+sutda+(thumb).png",
         "images" : [
             
         ],
@@ -115,7 +115,7 @@
         "title" : "땅따먹기 공방전",
         "type" : "jQuery",
         "date" : "2018-12-16",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/7.+ground-picking+(thumb).png",
         "images" : [
             
         ],
@@ -131,7 +131,7 @@
         "title" : "댕댕이 다마고치",
         "type" : "jQuery",
         "date" : "2018-12-27",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/8.+damagochi+(thumb).png",
         "images" : [
             
         ],
@@ -147,7 +147,7 @@
         "title" : "클럽 온 (React)",
         "type" : "react",
         "date" : "2020-05-12",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/9.+club+on+(thumb).gif",
         "images" : [
             
         ],
@@ -163,7 +163,7 @@
         "title" : "가위바위보 (React)",
         "type" : "react",
         "date" : "2020-05-31",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/10.+react+rps+(thumb).png",
         "images" : [
             
         ],
@@ -171,7 +171,7 @@
         "stack" : ["React", "jQuery"],
         "mobile" : false,
         "complate" : 100,
-        "url" : "http://reactcardrps.s3-website.ap-northeast-2.amazonaws.com/",
+        "url" : "http://reactrsp.s3-website.ap-northeast-2.amazonaws.com/",
         "comment" : "React 로 재구성한 가위바위보 게임"
     },
 
@@ -179,7 +179,7 @@
         "title" : "카드 가위바위보",
         "type" : "react",
         "date" : "2020-06-17",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/11.+card+rps+(thumb).png",
         "images" : [
             
         ],
@@ -195,7 +195,7 @@
         "title" : "테트리스",
         "type" : "react",
         "date" : "2020-06-20",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/12.+tetris+(thumb).png",
         "images" : [
             
         ],
@@ -211,7 +211,7 @@
         "title" : "Redux 쇼핑몰",
         "type" : "react",
         "date" : "2020-06-20",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/13.+sejun+mall+(thumb).png",
         "images" : [
             
         ],
@@ -227,12 +227,12 @@
         "title" : "Bingo !",
         "type" : "react",
         "date" : "2020-06-20",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/14.+bingo+(thumb).png",
         "images" : [
             
         ],
         "keyword" : [ "game" ],
-        "stack" : ["Redux", "TypeScript"],
+        "stack" : ["Redux", "TypeScript", "SCSS"],
         "mobile" : false,
         "complate" : 100,
         "url" : "http://typescript-bingo.s3-website.ap-northeast-2.amazonaws.com/",
@@ -243,12 +243,12 @@
         "title" : "대한의 마블 (부루마블)",
         "type" : "react",
         "date" : "2020-06-20",
-        "thumb" : "",
+        "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/14.+blue+marble+(thumb).png",
         "images" : [
             
         ],
         "keyword" : [ "game" ],
-        "stack" : ["Redux", "TypeScript"],
+        "stack" : ["Redux", "TypeScript", "SCSS"],
         "mobile" : false,
         "complate" : 100,
         "url" : "http://typescript-blue-marble.s3-website.ap-northeast-2.amazonaws.com/",

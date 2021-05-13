@@ -223,9 +223,11 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
                                      style={ (filter_data.length - 1) === key ? { 'borderBottom' : 'none' } : undefined }
                                 >   
                                     <div className='project_thumbnail_div'>
-                                        <img alt='' src={el.thumb} />
-                                        {/* <div style={{ 'backgroundImage' : `url(${el.thumb})` }} /> */}
+                                        <div className='project_thumbnail'>
+                                            <img alt='' src={el.thumb} />
+                                        </div>
                                     </div>
+
                                     <div className='project_detail_info_div'>
                                         <div className='project_title_grid_div'>
                                             <div className='project_title_div'

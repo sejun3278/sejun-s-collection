@@ -84,6 +84,7 @@ body {
 .App #home_div #my_profile_div #my_profile_info #profile_image_div {
   width: 200px;
   height: 200px;
+  background-image: url("https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/20210420_233452+(1).jpg");
   background-size: 200px;
   opacity: 0.9;
   border-right: solid 3px #ababab;
@@ -106,7 +107,6 @@ body {
 }
 .App #home_div #home_idx_div #my_project_info #project_list_div {
   border: solid 1px #ababab;
-  padding: 5px;
   min-height: 200px;
 }
 .App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div {
@@ -120,12 +120,17 @@ body {
   cursor: pointer;
   border-right: solid 1px #ababab;
 }
-.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_thumbnail_div img {
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_thumbnail_div .project_thumbnail {
   width: 147px;
+  height: 150px !important;
+}
+.App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_thumbnail_div .project_thumbnail img {
+  object-fit: cover;
+  width: 149px;
   height: 150px;
 }
 .App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div {
-  padding: 15px 10px;
+  padding: 15px 15px;
   max-width: 99%;
 }
 .App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_title_grid_div {
@@ -140,7 +145,7 @@ body {
   cursor: pointer;
 }
 .App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_info_web_div {
-  font-size: 14px;
+  font-size: 13px;
   padding-left: 10px;
 }
 .App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_info_web_div .project_category_div, .App #home_div #home_idx_div #my_project_info #project_list_div .project_info_div .project_detail_info_div .project_info_web_div .project_skill_stack_div {
@@ -238,6 +243,13 @@ body {
   .project_info_div .project_thumbnail_div {
     background-color: black;
     width: 100%;
+  }
+  .project_info_div .project_thumbnail_div .project_thumbnail {
+    width: 100% !important;
+    text-align: center;
+  }
+  .project_info_div .project_thumbnail_div .project_thumbnail img {
+    width: 200px !important;
   }
   .project_info_div .project_info_web_div {
     display: none;
