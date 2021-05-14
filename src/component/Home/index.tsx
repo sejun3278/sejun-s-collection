@@ -266,18 +266,18 @@ class HomeIndex extends React.Component<HomeIndexProps, HomeIndexState> {
                 <div id='my_project_info' className='index_div'>
                     <h4> 진행 프로젝트　{filter} </h4>
 
-                    <Modal
+                    {/* <Modal
                         isOpen={this.state.image_modal !== null}
                         // onAfterOpen={afterOpenModal}
                         onRequestClose={() => this._toggleImageModal(0, false)}
                         style={customStyles}
                         contentLabel="Example Modal"
                     >
-                        <Images 
+                        <Images
                             _toggleImageModal={this._toggleImageModal}
                             image_list={this.state.image_list}
                         />
-                    </Modal>
+                    </Modal> */}
                     
                     <div id='project_list_div'>
                         {filter_data.map( (el : any, key : number) => {

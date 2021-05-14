@@ -162,7 +162,7 @@ body {
                                 padding: 0px 5px;
                                 border: solid 1px black;
                                 border-radius: 6px;
-                                z-index: 1000;
+                                // z-index: 1000;
                                 font-size: 12px;
                                 font-family: $recipe_korea;
                                 color: $custom_color_1;
@@ -364,7 +364,6 @@ body {
         overflow:auto;
         overflow-y: hidden;
         white-space:nowrap;
-        min-width: 300px;
 
         #select_image {
             border: solid 3px $custom_color_1;
@@ -429,6 +428,7 @@ body {
                 height: 250px !important;
             }
         }
+
     }
 }
 
@@ -551,8 +551,8 @@ body {
 
 @media (max-width : 370px) {
     #images_div {
-        width: 90% !important;
-        margin-left: 5% !important;
+        // width: 90% !important;
+        // margin-left: 5% !important;
 
         #now_image_div {
             // width: 90% !important;
@@ -568,8 +568,8 @@ body {
 
 @media (max-width : 345px) {
     #images_div {
-        width: 80% !important;
-        margin-left: 10% !important;
+        // width: 80% !important;
+        // margin-left: 10% !important;
 
         #now_image_div {
             // width: 90% !important;

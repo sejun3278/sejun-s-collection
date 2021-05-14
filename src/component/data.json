@@ -23,7 +23,9 @@
         "date" : "2018-09-14",
         "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/1.+origin-rps+(thumb).png",
         "images" : [
-
+            "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/1.+play_1.gif",
+            "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/1.+play_2.gif",
+            "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/1.+play_3.gif"
         ],
         "keyword" : [ "Game" ],
         "stack" : ["jQuery"],
@@ -39,7 +41,10 @@
         "date" : "2018-09-17",
         "thumb" : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/2.+random+card+rps+(thumb).png",
         "images" : [
-            
+            "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/2.+play+0.png",
+            "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/2.+play+1.gif",
+            "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/2.+play+2.gif",
+            "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/2.+play+3.png"
         ],
         "keyword" : [ "Game" ],
         "stack" : ["jQuery"],

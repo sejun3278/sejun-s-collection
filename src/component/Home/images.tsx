@@ -7,13 +7,15 @@ interface ImagesProps {
 
 interface ImagesState {
     page_num : number,
-    close_icon : string
+    close_icon : string,
+    set_keyEvent : boolean,
 }
 
 class Images extends React.Component<ImagesProps, ImagesState> {
     public state = {
         page_num : 0,
-        close_icon : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/close.png"
+        close_icon : "https://sejunscollection.s3.ap-northeast-2.amazonaws.com/source/close.png",
+        set_keyEvent : false
     };
   
     constructor(props: ImagesProps) {
@@ -31,6 +33,8 @@ class Images extends React.Component<ImagesProps, ImagesState> {
         this.setState({
             'page_num' : 0
         })
+
+        
     }
 
     public render() {
